@@ -1,4 +1,5 @@
 src
 .babelrc
+.idea
 !dist
 yarn.lock

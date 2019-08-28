@@ -1,7 +1,7 @@
 # Next.js Progressbar
 A simple Next.js progressbar component using [NProgress](http://ricostacruz.com/nprogress/).
 
-> [My Blog to create your own progressba](https://gosink.in/next-js-make-your-own-progress-bar-indicator-component-easily/)
+> [I've created this Blog to help you create your own progressbar](https://gosink.in/next-js-make-your-own-progress-bar-indicator-component-easily/)
 
 ## How to install?
 ```

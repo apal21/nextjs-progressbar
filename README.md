@@ -17,7 +17,7 @@ And for rendering add `<NextNProgress />` inside `Container` component.
 
 ### Default Config
 ```
-<NextNProgress
+<NextNprogress
   color="#29D"
   startPosition="0.3"
   stopDelayMs="200"
@@ -32,7 +32,7 @@ And for rendering add `<NextNProgress />` inside `Container` component.
 ### Advanced Config
 You can use [other configurations](https://github.com/rstacruz/nprogress#configuration) which NProgress provides by adding a JSON in `options` props.
 ```
-<NextNProgress
+<NextNprogress
   options={{ easing: 'ease', speed: 500 }}
 />
 ```

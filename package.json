@@ -3,6 +3,7 @@
   "version": "0.0.5",
   "description": "Nprogress component for Next.js app.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "babel src -d dist",
     "prepublish": "npm run build"

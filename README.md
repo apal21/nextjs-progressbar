@@ -19,7 +19,7 @@ And for rendering add `<NextNProgress />` inside `Container` component.
 ```
 <NextNprogress
   color="#29D"
-  startPosition="0.3"
+  startPosition={0.3}
   stopDelayMs="200"
   height="3"
 />

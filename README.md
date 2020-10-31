@@ -3,6 +3,8 @@ A simple Next.js progressbar component using [NProgress](http://ricostacruz.com/
 
 > [I've created this Blog to help you create your own progressbar](https://gosink.in/next-js-make-your-own-progress-bar-indicator-component-easily/)
 
+**Demo**: [https://demo-nextjs-progressbar.vercel.app](https://demo-nextjs-progressbar.vercel.app/)
+
 ## How to install?
 ```
 npm i nextjs-progressbar

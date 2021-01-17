@@ -15,18 +15,30 @@ class NextNProgress extends React.Component {
   static defaultProps = {
     color: '#29D',
     startPosition: 0.3,
+    delayMs: 250,
     stopDelayMs: 200,
     height: 3,
   };
 
   timer = null;
+  // variable to keep track of the delay timeout.
+  timeout = null
 
   routeChangeStart = () => {
-    NProgress.set(this.props.startPosition);
-    NProgress.start();
+    // timeout that will show the progress bar after 250ms or user defined time.
+    this.timeout = setTimeout(() => {
+      NProgress.set(this.props.startPosition);
+      NProgress.start();
+    }, this.props.delayMs);
   };
 
   routeChangeEnd = () => {
+    // checking in the finish event listener if the progress bar has actually started, otherwise we'll inadvertently cause it to show before the timeout has finished.
+    if (!NProgress.isStarted()) {
+      return
+    }
+    // update the finish event listener to clear any existing timeouts, in the event that the page visit finishes before the timeout does.
+    clearTimeout(this.timeout);
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       NProgress.done(true);
@@ -123,6 +135,7 @@ class NextNProgress extends React.Component {
 NextNProgress.propTypes = {
   color: PropTypes.string,
   startPosition: PropTypes.number,
+  delayMs: PropTypes.number,
   stopDelayMs: PropTypes.number,
   options: PropTypes.object,
 };

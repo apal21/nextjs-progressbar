@@ -22,12 +22,14 @@ And for rendering add `<NextNProgress />` inside `Container` component.
 <NextNprogress
   color="#29D"
   startPosition={0.3}
+  delayMs={250}
   stopDelayMs={200}
   height="3"
 />
 ```
 * `color`: to change the default color of progressbar. You can also use `rgb(,,)` or `rgba(,,,)`.  
 * `startPosition`: to set the default starting position : `0.3 = 30%`.
+* `delayMs`: delay before starting progressbar in `ms` (so Indicator is hidden for fast requests).  
 * `stopDelayMs`: time for delay to stop progressbar in `ms`.  
 * `height`: height of progressbar in `px`.  
 

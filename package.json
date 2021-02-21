@@ -29,7 +29,7 @@
   },
   "peerDependencies": {
     "next": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
-    "react": "^16.0.0"
+    "react": "^16.0.0 || ^17"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -39,6 +39,6 @@
     "@babel/preset-react": "^7.10.4",
     "babel-preset-minify": "^0.5.1",
     "next": "^10.0.0",
-    "react": "^16.13.1"
+    "react": "^17.0.1"
   }
 }

@@ -6,7 +6,7 @@
 
 import React from 'react';
 import NProgress from 'nprogress';
-import Router from "next/router";
+import Router from 'next/router';
 import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
@@ -15,21 +15,36 @@ class NextNProgress extends React.Component {
   static defaultProps = {
     color: '#29D',
     startPosition: 0.3,
+    startDelayMs: 0,
     stopDelayMs: 200,
     height: 3,
   };
 
-  timer = null;
+  startTimer = null;
+  stopTimer = null;
+
+  clearTimers = () => {
+    clearTimeout(this.stopTimer);
+    clearTimeout(this.startTimer);
+    this.stopTimer = null;
+    this.startTimer = null;
+  };
 
   routeChangeStart = () => {
-    NProgress.set(this.props.startPosition);
-    NProgress.start();
+    this.clearTimers();
+    this.startTimer = setTimeout(() => {
+      this.clearTimers();
+      NProgress.set(this.props.startPosition);
+      NProgress.start();
+    }, this.props.startDelayMs);
   };
 
   routeChangeEnd = () => {
-    clearTimeout(this.timer);
-    this.timer = setTimeout(() => {
-      NProgress.done(true);
+    this.clearTimers();
+    this.stopTimer = setTimeout(() => {
+      if (NProgress.isStarted()) {
+        NProgress.done(true);
+      }
     }, this.props.stopDelayMs);
   };
 
@@ -63,7 +78,7 @@ class NextNProgress extends React.Component {
           transform: rotate(3deg) translate(0px, -4px);
         }
         #nprogress .spinner {
-          display: "block";
+          display: 'block';
           position: fixed;
           z-index: 1031;
           top: 15px;
@@ -104,7 +119,8 @@ class NextNProgress extends React.Component {
             transform: rotate(360deg);
           }
         }
-      `}</style>);
+      `}</style>
+    );
   }
 
   componentDidMount() {
@@ -123,6 +139,7 @@ class NextNProgress extends React.Component {
 NextNProgress.propTypes = {
   color: PropTypes.string,
   startPosition: PropTypes.number,
+  startDelayMs: PropTypes.number,
   stopDelayMs: PropTypes.number,
   options: PropTypes.object,
 };

@@ -78,7 +78,7 @@ class NextNProgress extends React.Component {
           transform: rotate(3deg) translate(0px, -4px);
         }
         #nprogress .spinner {
-          display: 'block';
+          display: block;
           position: fixed;
           z-index: 1031;
           top: 15px;

@@ -8,7 +8,6 @@ import React from 'react';
 import NProgress from 'nprogress';
 import Router from "next/router";
 import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 
 /* eslint-disable react/prefer-stateless-function */
 class NextNProgress extends React.Component {
@@ -17,20 +16,25 @@ class NextNProgress extends React.Component {
     startPosition: 0.3,
     stopDelayMs: 200,
     height: 3,
+    showOnShallow: true,
   };
 
   timer = null;
 
-  routeChangeStart = () => {
-    NProgress.set(this.props.startPosition);
-    NProgress.start();
+  routeChangeStart = (_, { shallow }) => {
+    if (!shallow || this.props.showOnShallow) {
+      NProgress.set(this.props.startPosition);
+      NProgress.start();
+    }
   };
 
-  routeChangeEnd = () => {
-    clearTimeout(this.timer);
-    this.timer = setTimeout(() => {
-      NProgress.done(true);
-    }, this.props.stopDelayMs);
+  routeChangeEnd = (_, { shallow }) => {
+    if (!shallow || this.props.showOnShallow) {
+      clearTimeout(this.timer);
+      this.timer = setTimeout(() => {
+        NProgress.done(true);
+      }, this.props.stopDelayMs);
+    }
   };
 
   render() {
@@ -118,12 +122,20 @@ class NextNProgress extends React.Component {
     Router.events.on('routeChangeComplete', this.routeChangeEnd);
     Router.events.on('routeChangeError', this.routeChangeEnd);
   }
+
+  componentWillUnmount() {
+    Router.events.off('routeChangeStart', this.routeChangeStart);
+    Router.events.off('routeChangeComplete', this.routeChangeEnd);
+    Router.events.off('routeChangeError', this.routeChangeEnd);
+  }
 }
 
 NextNProgress.propTypes = {
   color: PropTypes.string,
   startPosition: PropTypes.number,
   stopDelayMs: PropTypes.number,
+  height: PropTypes.number,
+  showOnShallow: PropTypes.bool,
   options: PropTypes.object,
 };
 

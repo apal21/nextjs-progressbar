@@ -24,12 +24,14 @@ And for rendering add `<NextNProgress />` inside `Container` component.
   startPosition={0.3}
   stopDelayMs={200}
   height={3}
+  showOnShallow={true}
 />
 ```
 * `color`: to change the default color of progressbar. You can also use `rgb(,,)` or `rgba(,,,)`.  
 * `startPosition`: to set the default starting position : `0.3 = 30%`.
 * `stopDelayMs`: time for delay to stop progressbar in `ms`.  
 * `height`: height of progressbar in `px`.  
+* `showOnShallow`: You can choose whether you want the progressbar to be displayed if you're using shallow routing. It takes a boolean. Learn more about shallow routing [in Next.js docs](https://nextjs.org/docs/routing/shallow-routing).
 
 ### Advanced Config
 You can use [other configurations](https://github.com/rstacruz/nprogress#configuration) which NProgress provides by adding a JSON in `options` props.

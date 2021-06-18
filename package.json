@@ -1,6 +1,6 @@
 {
   "name": "nextjs-progressbar",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Nprogress component for Next.js app.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -38,7 +38,7 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-preset-minify": "^0.5.1",
-    "next": "^10.0.0",
+    "next": "^11.0.0",
     "react": "^17.0.2"
   }
 }

@@ -12,13 +12,13 @@ npm i nextjs-progressbar
 
 ## How to use?
 After installing the package, import this in your `pages/_app.js` file.
-```
+```js
 import NextNprogress from 'nextjs-progressbar';
 ```
 And for rendering add `<NextNProgress />` inside `Container` component.
 
 ### Default Config
-```
+```jsx
 <NextNprogress
   color="#29D"
   startPosition={0.3}
@@ -35,7 +35,7 @@ And for rendering add `<NextNProgress />` inside `Container` component.
 
 ### Advanced Config
 You can use [other configurations](https://github.com/rstacruz/nprogress#configuration) which NProgress provides by adding a JSON in `options` props.
-```
+```jsx
 <NextNprogress
   options={{ easing: 'ease', speed: 500 }}
 />

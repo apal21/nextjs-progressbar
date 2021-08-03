@@ -7,6 +7,7 @@ declare class NextNProgress extends React.Component<{
   showOnShallow?: boolean;
   startPosition?: number;
   stopDelayMs?: number;
+  showSpinner?: boolean;
   options?: Partial<NProgressOptions>;
 }> { }
 

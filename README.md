@@ -11,13 +11,26 @@ npm i nextjs-progressbar
 ```
 
 ## How to use?
-After installing the package, import this in your `pages/_app.js` file.
+After installing the package, import `NextNprogress` in your `pages/_app.js` file:
 ```js
 import NextNprogress from 'nextjs-progressbar';
 ```
-And for rendering add `<NextNProgress />` inside `Container` component.
+And for rendering add `<NextNProgress />` to your `return()` in `MyApp()`:
+```js
+import NextNProgress from 'nextjs-progressbar';
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <NextNProgress />
+      <Component {...pageProps} />;
+    </>
+  );
+}
+```
 
 ### Default Config
+If no props are passed to `<NextNProgress />`, below is the default configuration applied.
 ```jsx
 <NextNprogress
   color="#29D"

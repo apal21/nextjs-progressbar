@@ -1,4 +1,5 @@
 # Next.js Progressbar
+
 A simple Next.js progressbar component using [NProgress](http://ricostacruz.com/nprogress/).
 
 > [I've created this Blog to help you create your own progressbar](https://gosink.in/next-js-make-your-own-progress-bar-indicator-component-easily/)
@@ -6,18 +7,23 @@ A simple Next.js progressbar component using [NProgress](http://ricostacruz.com/
 **Demo**: [https://demo-nextjs-progressbar.vercel.app](https://demo-nextjs-progressbar.vercel.app/)
 
 ## How to install?
-```
+
+```bash
 npm i nextjs-progressbar
 ```
 
 ## How to use?
+
 After installing the package, import `NextNprogress` in your `pages/_app.js` file:
+
 ```js
-import NextNprogress from 'nextjs-progressbar';
+import NextNprogress from "nextjs-progressbar";
 ```
+
 And for rendering add `<NextNProgress />` to your `return()` in `MyApp()`:
+
 ```js
-import NextNProgress from 'nextjs-progressbar';
+import NextNProgress from "nextjs-progressbar";
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -30,7 +36,9 @@ export default function MyApp({ Component, pageProps }) {
 ```
 
 ### Default Config
+
 If no props are passed to `<NextNProgress />`, below is the default configuration applied.
+
 ```jsx
 <NextNprogress
   color="#29D"
@@ -40,16 +48,17 @@ If no props are passed to `<NextNProgress />`, below is the default configuratio
   showOnShallow={true}
 />
 ```
-* `color`: to change the default color of progressbar. You can also use `rgb(,,)` or `rgba(,,,)`.  
-* `startPosition`: to set the default starting position : `0.3 = 30%`.
-* `stopDelayMs`: time for delay to stop progressbar in `ms`.  
-* `height`: height of progressbar in `px`.  
-* `showOnShallow`: You can choose whether you want the progressbar to be displayed if you're using shallow routing. It takes a boolean. Learn more about shallow routing [in Next.js docs](https://nextjs.org/docs/routing/shallow-routing).
+
+- `color`: to change the default color of progressbar. You can also use `rgb(,,)` or `rgba(,,,)`.
+- `startPosition`: to set the default starting position : `0.3 = 30%`.
+- `stopDelayMs`: time for delay to stop progressbar in `ms`.
+- `height`: height of progressbar in `px`.
+- `showOnShallow`: You can choose whether you want the progressbar to be displayed if you're using shallow routing. It takes a boolean. Learn more about shallow routing [in Next.js docs](https://nextjs.org/docs/routing/shallow-routing).
 
 ### Advanced Config
+
 You can use [other configurations](https://github.com/rstacruz/nprogress#configuration) which NProgress provides by adding a JSON in `options` props.
+
 ```jsx
-<NextNprogress
-  options={{ easing: 'ease', speed: 500 }}
-/>
+<NextNprogress options={{ easing: "ease", speed: 500 }} />
 ```

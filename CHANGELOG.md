@@ -1,3 +1,8 @@
+## v0.0.12
+### Updated:
+- Updated README.md's 'How to use' section to be more clear and consise. Also added further context to Default Config.
+- Updated Next.js version to v12
+
 ## v0.0.11
 ### Added:
 - Added next.js version 11.0.0 in package.json `peerDependancies`.

@@ -1,6 +1,6 @@
 {
   "name": "nextjs-progressbar",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Nprogress component for Next.js app.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -25,11 +25,12 @@
   },
   "homepage": "https://github.com/apal21/nextjs-progressbar#readme",
   "dependencies": {
-    "nprogress": "^0.2.0"
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "next": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
-    "react": "^16.0.0 || ^17.0.0"
+    "next": ">= 6.0.0 <=12.x.x",
+    "react": ">= 16.0.0 < 17.x.x"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -38,7 +39,7 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-preset-minify": "^0.5.1",
-    "next": "^11.0.0",
+    "next": "^12.0.0",
     "react": "^17.0.2"
   }
 }

@@ -1,3 +1,7 @@
+## v0.0.13
+### Fixed:
+- Fixed react version issue
+
 ## v0.0.12
 ### Updated:
 - Updated README.md's 'How to use' section to be more clear and consise. Also added further context to Default Config.

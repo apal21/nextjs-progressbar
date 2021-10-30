@@ -1,5 +1,19 @@
 src
 .babelrc
-.idea
 !dist
-yarn.lock
+
+# Linter
+.eslintignore
+.eslintrc.json
+.prettierrc
+
+# IDE
+.idea
+.vscode
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional eslint cache
+.eslintcache

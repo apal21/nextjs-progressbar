@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  *
  * NProgress
@@ -9,7 +10,6 @@ import NProgress from "nprogress";
 import PropTypes from "prop-types";
 import React from "react";
 
-/* eslint-disable react/prefer-stateless-function */
 class NextNProgress extends React.Component {
   static defaultProps = {
     color: "#29D",

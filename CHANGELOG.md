@@ -1,11 +1,5 @@
 # Changelogs
 
-## v0.0.14
-
-### Added
-
-- added types for nprogress
-
 ## v0.0.13
 
 ### Fixed

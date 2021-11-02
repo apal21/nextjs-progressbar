@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { NProgressOptions } from 'nprogress';
+import { NProgressOptions } from "nprogress";
+import * as React from "react";
 
 declare class NextNProgress extends React.Component<{
   color?: string;
@@ -8,6 +8,6 @@ declare class NextNProgress extends React.Component<{
   startPosition?: number;
   stopDelayMs?: number;
   options?: Partial<NProgressOptions>;
-}> { }
+}> {}
 
 export default NextNProgress;

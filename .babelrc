@@ -1,11 +1,4 @@
 {
-  "presets": [
-    "@babel/preset-env",
-    "@babel/preset-react",
-    "minify"
-  ],
-  "plugins": [
-    "styled-jsx/babel",
-    "@babel/plugin-proposal-class-properties"
-  ]
-}  
+  "presets": ["@babel/preset-env", "@babel/preset-react", "minify"],
+  "plugins": ["styled-jsx/babel", "@babel/plugin-proposal-class-properties"]
+}

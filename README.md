@@ -40,7 +40,7 @@ export default function MyApp({ Component, pageProps }) {
 If no props are passed to `<NextNProgress />`, below is the default configuration applied.
 
 ```jsx
-<NextNprogress
+<NextNProgress
   color="#29D"
   startPosition={0.3}
   stopDelayMs={200}
@@ -60,5 +60,5 @@ If no props are passed to `<NextNProgress />`, below is the default configuratio
 You can use [other configurations](https://github.com/rstacruz/nprogress#configuration) which NProgress provides by adding a JSON in `options` props.
 
 ```jsx
-<NextNprogress options={{ easing: "ease", speed: 500 }} />
+<NextNProgress options={{ easing: "ease", speed: 500 }} />
 ```

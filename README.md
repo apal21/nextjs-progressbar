@@ -14,10 +14,10 @@ npm i nextjs-progressbar
 
 ## How to use?
 
-After installing the package, import `NextNprogress` in your `pages/_app.js` file:
+After installing the package, import `NextNProgress` in your `pages/_app.js` file:
 
 ```js
-import NextNprogress from "nextjs-progressbar";
+import NextNProgress from "nextjs-progressbar";
 ```
 
 And for rendering add `<NextNProgress />` to your `return()` in `MyApp()`:

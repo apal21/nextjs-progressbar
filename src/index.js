@@ -8,7 +8,7 @@
 import Router from "next/router";
 import NProgress from "nprogress";
 import PropTypes from "prop-types";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 export default function NextNProgress({
   color = "#29D",

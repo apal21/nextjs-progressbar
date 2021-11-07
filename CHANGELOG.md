@@ -1,5 +1,12 @@
 # Changelogs
 
+## v0.0.14
+
+### Added
+
+- Added nonce support
+- Added autocomplete for advanced options
+
 ## v0.0.13
 
 ### Fixed

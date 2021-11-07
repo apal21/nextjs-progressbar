@@ -57,6 +57,16 @@ If no props are passed to `<NextNProgress />`, below is the default configuratio
 
 ### Advanced Config
 
+#### Adding nonce
+
+We use internal css in this package. If you are using csp, you can add nonce to the `<style>` tag by providing `nonce` prop to `<NextNProgress />` component.
+
+```jsx
+<NextNProgress nonce="my-nonce" />
+```
+
+#### Other Configs
+
 You can use [other configurations](https://github.com/rstacruz/nprogress#configuration) which NProgress provides by adding a JSON in `options` props.
 
 ```jsx

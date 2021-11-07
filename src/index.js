@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /**
  *
  * NProgress
@@ -17,6 +16,7 @@ class NextNProgress extends React.Component {
     stopDelayMs: 200,
     height: 3,
     showOnShallow: true,
+    nonce: undefined,
   };
 
   timer = null;
@@ -38,10 +38,10 @@ class NextNProgress extends React.Component {
   };
 
   render() {
-    const { color, height } = this.props;
+    const { color, height, nonce } = this.props;
 
     return (
-      <style jsx global>{`
+      <style jsx global nonce={nonce}>{`
         #nprogress {
           pointer-events: none;
         }

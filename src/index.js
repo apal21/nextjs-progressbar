@@ -137,6 +137,7 @@ NextNProgress.propTypes = {
   stopDelayMs: PropTypes.number,
   height: PropTypes.number,
   showOnShallow: PropTypes.bool,
+  nonce: PropTypes.string,
   options: PropTypes.object,
 };
 

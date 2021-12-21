@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/apal21/nextjs-progressbar#readme",
   "peerDependencies": {
+    "next": ">= 6.0.0",
     "react": ">= 16.0.0"
   },
   "dependencies": {

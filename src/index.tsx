@@ -101,7 +101,7 @@ export default function NextNProgress({
   };
 
   return (
-    <style jsx global nonce={nonce}>{`
+    <style nonce={nonce}>{`
       #nprogress {
         pointer-events: none;
       }

@@ -3,10 +3,22 @@
   "version": "0.0.14",
   "description": "Nprogress component for Next.js app.",
   "main": "index.js",
+  "exports": {
+    ".": [
+      {
+        "require": "./index.js",
+        "import": "./esm.mjs"
+      },
+      "./index.js"
+    ],
+    "./": "./",
+    "./esm": "./esm.mjs"
+  },
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "lint": "eslint src/"
   },
   "repository": {
     "type": "git",

@@ -1,9 +1,9 @@
 src
+.github
 
 # Linter
 .eslintignore
 .eslintrc.json
-.prettierrc
 
 # IDE
 .idea
@@ -13,5 +13,11 @@ src
 node_modules/
 jspm_packages/
 
+# Ts config file
+tsconfig.json
+
 # Optional eslint cache
 .eslintcache
+
+# optional snyk cache
+.dccache

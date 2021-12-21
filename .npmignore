@@ -1,6 +1,4 @@
 src
-.babelrc
-!dist
 
 # Linter
 .eslintignore

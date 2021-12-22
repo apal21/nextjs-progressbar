@@ -15,8 +15,8 @@ export default function NextNProgress({
   stopDelayMs = 200,
   height = 3,
   showOnShallow = true,
-  options = null,
-  nonce = undefined,
+  options,
+  nonce,
 }: {
   /**
    * The color of the bar.
@@ -47,7 +47,7 @@ export default function NextNProgress({
    * The other NProgress configuration options to pass to NProgress.
    * @default null
    */
-  options?: null | NProgress.NProgressOptions;
+  options?: Partial<NProgress.NProgressOptions>;
   /**
    * The nonce attribute to use for the `style` tag.
    * @default undefined

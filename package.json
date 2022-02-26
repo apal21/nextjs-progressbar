@@ -2,18 +2,7 @@
   "name": "nextjs-progressbar",
   "version": "0.0.14",
   "description": "Nprogress component for Next.js app.",
-  "main": "index.js",
-  "exports": {
-    ".": [
-      {
-        "require": "./index.js",
-        "import": "./esm.mjs"
-      },
-      "./index.js"
-    ],
-    "./": "./",
-    "./esm": "./esm.mjs"
-  },
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -41,6 +30,7 @@
     "react": ">= 16.0.0"
   },
   "dependencies": {
+    "@types/node": "^17.0.21",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2"
   },

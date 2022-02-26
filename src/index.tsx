@@ -4,13 +4,13 @@
  *
  */
 
-import Router from "next/router";
-import * as NProgress from "nprogress";
-import * as PropTypes from "prop-types";
-import * as React from "react";
+import Router from 'next/router';
+import * as NProgress from 'nprogress';
+import * as PropTypes from 'prop-types';
+import * as React from 'react';
 
 export default function NextNProgress({
-  color = "#29D",
+  color = '#29D',
   startPosition = 0.3,
   stopDelayMs = 200,
   height = 3,
@@ -60,13 +60,13 @@ export default function NextNProgress({
     if (options) {
       NProgress.configure(options);
     }
-    Router.events.on("routeChangeStart", routeChangeStart);
-    Router.events.on("routeChangeComplete", routeChangeEnd);
-    Router.events.on("routeChangeError", routeChangeEnd);
+    Router.events.on('routeChangeStart', routeChangeStart);
+    Router.events.on('routeChangeComplete', routeChangeEnd);
+    Router.events.on('routeChangeError', routeChangeEnd);
     return () => {
-      Router.events.off("routeChangeStart", routeChangeStart);
-      Router.events.off("routeChangeComplete", routeChangeEnd);
-      Router.events.off("routeChangeError", routeChangeEnd);
+      Router.events.off('routeChangeStart', routeChangeStart);
+      Router.events.off('routeChangeComplete', routeChangeEnd);
+      Router.events.off('routeChangeError', routeChangeEnd);
     };
   }, []);
 

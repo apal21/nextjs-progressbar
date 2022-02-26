@@ -1,5 +1,11 @@
+# Source files
 src
+
+# github workflows
 .github
+
+# Tsup config
+tsup.config.ts
 
 # Linter
 .eslintignore

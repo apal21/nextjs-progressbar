@@ -1,56 +1,56 @@
 {
-	"name": "nextjs-progressbar",
-	"version": "0.0.14",
-	"description": "Nprogress component for Next.js app.",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"scripts": {
-		"build": "tsup",
-		"prepack": "npm run build",
-		"lint": "eslint --fix --cache src/",
-		"format": "prettier --write \"src/**/*.{ts,tsx}\"",
-		"typecheck": "tsc -p tsconfig.json"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/apal21/nextjs-progressbar.git"
-	},
-	"keywords": [
-		"Nprogress",
-		"Next",
-		"Next.js",
-		"Progressbar"
-	],
-	"author": "Apal Shah",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/apal21/nextjs-progressbar/issues"
-	},
-	"homepage": "https://github.com/apal21/nextjs-progressbar#readme",
-	"files": [
-		"dist/**/*.js*",
-		"dist/**/*.mjs*",
-		"dist/**/*.d*"
-	],
-	"peerDependencies": {
-		"next": ">= 6.0.0",
-		"react": ">= 16.0.0"
-	},
-	"dependencies": {
-		"@types/nprogress": "^0.2.0",
-		"nprogress": "^0.2.0",
-		"prop-types": "^15.7.2"
-	},
-	"devDependencies": {
-		"@types/node": "^17.0.21",
-		"@types/react": "^18.0.17",
-		"@typescript-eslint/eslint-plugin": "^5.33.0",
-		"@typescript-eslint/parser": "^5.33.0",
-		"eslint": "^8.21.0",
-		"next": "^12.2.4",
-		"prettier": "^2.7.1",
-		"react": "^18.2.0",
-		"tsup": "^6.2.1",
-		"typescript": "^4.7.4"
-	}
+  "name": "nextjs-progressbar",
+  "version": "0.0.14",
+  "description": "Nprogress component for Next.js app.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "prepack": "npm run build",
+    "lint": "eslint --fix --cache src/",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apal21/nextjs-progressbar.git"
+  },
+  "keywords": [
+    "Nprogress",
+    "Next",
+    "Next.js",
+    "Progressbar"
+  ],
+  "author": "Apal Shah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apal21/nextjs-progressbar/issues"
+  },
+  "homepage": "https://github.com/apal21/nextjs-progressbar#readme",
+  "files": [
+    "dist/**/*.js*",
+    "dist/**/*.mjs*",
+    "dist/**/*.d*"
+  ],
+  "peerDependencies": {
+    "next": ">= 6.0.0",
+    "react": ">= 16.0.0"
+  },
+  "dependencies": {
+    "@types/nprogress": "^0.2.0",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^18.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "eslint": "^8.21.0",
+    "next": "^12.2.4",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "tsup": "^6.2.1",
+    "typescript": "^4.7.4"
+  }
 }

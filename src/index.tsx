@@ -62,11 +62,11 @@ export default function NextNProgress({
     }
     Router.events.on('routeChangeStart', routeChangeStart);
     Router.events.on('routeChangeComplete', routeChangeEnd);
-    Router.events.on('routeChangeError', routeChangeEnd);
+    Router.events.on('routeChangeError', routeChangeError);
     return () => {
       Router.events.off('routeChangeStart', routeChangeStart);
       Router.events.off('routeChangeComplete', routeChangeEnd);
-      Router.events.off('routeChangeError', routeChangeEnd);
+      Router.events.off('routeChangeError', routeChangeError);
     };
   }, []);
 
@@ -86,6 +86,23 @@ export default function NextNProgress({
 
   const routeChangeEnd = (
     _: string,
+    {
+      shallow,
+    }: {
+      shallow: boolean;
+    }
+  ) => {
+    if (!shallow || showOnShallow) {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        NProgress.done(true);
+      }, stopDelayMs);
+    }
+  };
+
+  const routeChangeError = (
+    _err: Error,
+    _url: string,
     {
       shallow,
     }: {

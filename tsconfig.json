@@ -15,8 +15,7 @@
     "moduleResolution": "node",
     "lib": ["es2021"],
     "skipLibCheck": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
+    "noEmit": true,
     "outDir": "dist"
   },
   "files": ["src/index.tsx"]

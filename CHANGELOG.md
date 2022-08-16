@@ -1,5 +1,9 @@
 # Changelogs
 
+## v0.0.15
+
+- Properly handle `routeChangeError` event
+
 ## v0.0.14
 
 ### Added

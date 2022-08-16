@@ -2,7 +2,7 @@ import { Options } from 'tsup';
 export const tsup: Options = {
   target: 'esnext',
   clean: true,
-  dts: false,
+  dts: true,
   entry: ['src/index.tsx'],
   keepNames: true,
   minify: true,

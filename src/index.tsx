@@ -45,6 +45,12 @@ export interface NextNProgressProps {
    * @default undefined
    */
   nonce?: string;
+
+  /**
+   * Use your custom CSS tag instead of the default one.
+   * This is useful if you want to minify the CSS.
+   */
+  customCSSTag?: JSX.Element;
 }
 
 const NextNProgress = ({
@@ -55,6 +61,7 @@ const NextNProgress = ({
   showOnShallow = true,
   options,
   nonce,
+  customCSSTag,
 }: NextNProgressProps) => {
   let timer: NodeJS.Timeout | null = null;
 
@@ -120,7 +127,8 @@ const NextNProgress = ({
   };
 
   return (
-    <style nonce={nonce}>{`
+    customCSSTag || (
+      <style nonce={nonce}>{`
     #nprogress {
       pointer-events: none;
     }
@@ -188,6 +196,7 @@ const NextNProgress = ({
       }
     }
   `}</style>
+    )
   );
 };
 
@@ -199,6 +208,7 @@ NextNProgress.propTypes = {
   showOnShallow: PropTypes.bool,
   options: PropTypes.object,
   nonce: PropTypes.string,
+  customCSSTag: PropTypes.element,
 };
 
 export default React.memo(NextNProgress);

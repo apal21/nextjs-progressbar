@@ -1,5 +1,10 @@
 # Changelogs
 
+## v0.0.16
+
+- Use `React.memo` for better performance
+- Allow passing custom css tag in props
+
 ## v0.0.15
 
 - Properly handle `routeChangeError` event

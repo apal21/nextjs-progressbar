@@ -2,8 +2,6 @@
 # Optional eslint cache
 .eslintcache
 
-# Optional REPL history
-.node_repl_history
 
 # Output of 'npm pack'
 *.tgz
@@ -18,3 +16,11 @@ node_modules
 .idea
 .DS_Store
 dist
+
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

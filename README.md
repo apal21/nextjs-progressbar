@@ -17,13 +17,13 @@ npm i nextjs-progressbar
 After installing the package, import `NextNProgress` in your `pages/_app.js` file:
 
 ```js
-import NextNProgress from "nextjs-progressbar";
+import NextNProgress from 'nextjs-progressbar';
 ```
 
 And for rendering add `<NextNProgress />` to your `return()` in `MyApp()`:
 
 ```js
-import NextNProgress from "nextjs-progressbar";
+import NextNProgress from 'nextjs-progressbar';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -40,13 +40,7 @@ export default function MyApp({ Component, pageProps }) {
 If no props are passed to `<NextNProgress />`, below is the default configuration applied.
 
 ```jsx
-<NextNProgress
-  color="#29D"
-  startPosition={0.3}
-  stopDelayMs={200}
-  height={3}
-  showOnShallow={true}
-/>
+<NextNProgress color="#29D" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
 ```
 
 - `color`: to change the default color of progressbar. You can also use `rgb(,,)` or `rgba(,,,)`.
@@ -65,10 +59,24 @@ We use internal css in this package. If you are using csp, you can add nonce to 
 <NextNProgress nonce="my-nonce" />
 ```
 
+#### Custom CSS
+
+You can use `transformCSS` prop to pass custom css.
+**Note:** You must return a `JSX.Element` from the function.
+
+```jsx
+<NextNProgress
+  transformCSS={(css) => {
+    // css is the default css string. You can modify it and return it or return your own css.
+    return <style>{css}</style>;
+  }}
+/>
+```
+
 #### Other Configs
 
 You can use [other configurations](https://github.com/rstacruz/nprogress#configuration) which NProgress provides by adding a JSON in `options` props.
 
 ```jsx
-<NextNProgress options={{ easing: "ease", speed: 500 }} />
+<NextNProgress options={{ easing: 'ease', speed: 500 }} />
 ```

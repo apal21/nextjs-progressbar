@@ -48,9 +48,10 @@ export interface NextNProgressProps {
 
   /**
    * Use your custom CSS tag instead of the default one.
-   * This is useful if you want to minify the CSS.
+   * This is useful if you want to use a different style or minify the CSS.
+   * @default (css) => <style nonce={nonce}>{css}</style>
    */
-  customCSSTag?: JSX.Element;
+  transformCSS?: (css: string) => JSX.Element;
 }
 
 const NextNProgress = ({
@@ -61,7 +62,7 @@ const NextNProgress = ({
   showOnShallow = true,
   options,
   nonce,
-  customCSSTag,
+  transformCSS = (css) => <style nonce={nonce}>{css}</style>,
 }: NextNProgressProps) => {
   let timer: NodeJS.Timeout | null = null;
 
@@ -126,9 +127,7 @@ const NextNProgress = ({
     }
   };
 
-  return (
-    customCSSTag || (
-      <style nonce={nonce}>{`
+  return transformCSS(`
     #nprogress {
       pointer-events: none;
     }
@@ -195,9 +194,7 @@ const NextNProgress = ({
         transform: rotate(360deg);
       }
     }
-  `}</style>
-    )
-  );
+  `);
 };
 
 NextNProgress.propTypes = {

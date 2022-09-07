@@ -205,7 +205,7 @@ NextNProgress.propTypes = {
   showOnShallow: PropTypes.bool,
   options: PropTypes.object,
   nonce: PropTypes.string,
-  transformCSS: PropTypes.element,
+  transformCSS: PropTypes.func,
 };
 
 export default React.memo(NextNProgress);

@@ -1,6 +1,6 @@
 {
   "name": "nextjs-progressbar",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Nprogress component for Next.js app.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -39,18 +39,19 @@
   "dependencies": {
     "@types/nprogress": "^0.2.0",
     "nprogress": "^0.2.0",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.8.1"
   },
   "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@types/react": "^18.0.17",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
-    "eslint": "^8.21.0",
-    "next": "^12.2.4",
+    "@types/node": "^18.8.4",
+    "@types/react": "^18.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.25.0",
+    "next": "^12.3.1",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
-    "tsup": "^6.2.1",
-    "typescript": "^4.7.4"
-  }
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.4"
+  },
+  "packageManager": "yarn@3.2.4"
 }

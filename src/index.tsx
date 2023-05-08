@@ -52,6 +52,21 @@ export interface NextNProgressProps {
    * @default (css) => <style nonce={nonce}>{css}</style>
    */
   transformCSS?: (css: string) => JSX.Element;
+  
+  /**
+   * This callback function will fires when a route starts to change
+   */
+  onProgressStart?: (_: string) => void;
+  
+  /**
+   * This callback function will fires when a route changed completely
+   */  
+  onProgressComplete?: (_: string) => void;
+  
+  /**
+   * This callback function will fires when there's an error when changing routes, or a route load is cancelled
+   */  
+  onProgressError?: (_: string) => void;
 }
 
 const NextNProgress = ({
@@ -63,6 +78,9 @@ const NextNProgress = ({
   options,
   nonce,
   transformCSS = (css) => <style nonce={nonce}>{css}</style>,
+  onProgressStart,
+  onProgressComplete,
+  onProgressError,
 }: NextNProgressProps) => {
   let timer: NodeJS.Timeout | null = null;
 
@@ -91,6 +109,7 @@ const NextNProgress = ({
     if (!shallow || showOnShallow) {
       NProgress.set(startPosition);
       NProgress.start();
+      onProgressStart?.(_);
     }
   };
 
@@ -106,6 +125,7 @@ const NextNProgress = ({
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => {
         NProgress.done(true);
+        onProgressComplete?.(_);
       }, stopDelayMs);
     }
   };
@@ -123,6 +143,7 @@ const NextNProgress = ({
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => {
         NProgress.done(true);
+        onProgressError?.(_)
       }, stopDelayMs);
     }
   };

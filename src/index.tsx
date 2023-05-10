@@ -62,7 +62,7 @@ const NextNProgress = ({
   showOnShallow = true,
   options,
   nonce,
-  transformCSS = (css) => <style nonce={nonce}>{css}</style>,
+  transformCSS = (css) => <style nonce={nonce} jsx global>{css}</style>,
 }: NextNProgressProps) => {
   let timer: NodeJS.Timeout | null = null;
 

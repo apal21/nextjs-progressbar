@@ -62,7 +62,11 @@ const NextNProgress = ({
   showOnShallow = true,
   options,
   nonce,
-  transformCSS = (css) => <style nonce={nonce} jsx global>{css}</style>,
+  transformCSS = (css) => (
+    <style nonce={nonce} jsx global>
+      {css}
+    </style>
+  ),
 }: NextNProgressProps) => {
   let timer: NodeJS.Timeout | null = null;
 
@@ -209,3 +213,10 @@ NextNProgress.propTypes = {
 };
 
 export default React.memo(NextNProgress);
+
+declare module 'react' {
+  interface StyleHTMLAttributes<T> extends React.HTMLAttributes<T> {
+    jsx?: boolean;
+    global?: boolean;
+  }
+}

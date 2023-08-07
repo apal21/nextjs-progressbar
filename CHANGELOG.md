@@ -1,5 +1,9 @@
 # Changelogs
 
+## v0.0.17
+
+- put styles inside of `head` tag
+
 ## v0.0.16
 
 - Use `React.memo` for better performance

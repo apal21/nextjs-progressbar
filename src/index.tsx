@@ -90,7 +90,7 @@ const NextNProgress = ({
       shallow,
     }: {
       shallow: boolean;
-    }
+    },
   ) => {
     if (!shallow || showOnShallow) {
       NProgress.set(startPosition);
@@ -104,7 +104,7 @@ const NextNProgress = ({
       shallow,
     }: {
       shallow: boolean;
-    }
+    },
   ) => {
     if (!shallow || showOnShallow) {
       if (timer) clearTimeout(timer);
@@ -121,7 +121,7 @@ const NextNProgress = ({
       shallow,
     }: {
       shallow: boolean;
-    }
+    },
   ) => {
     if (!shallow || showOnShallow) {
       if (timer) clearTimeout(timer);

@@ -6,6 +6,10 @@ A simple Next.js progressbar component using [NProgress](http://ricostacruz.com/
 
 **Demo**: [https://demo-nextjs-progressbar.vercel.app](https://demo-nextjs-progressbar.vercel.app/)
 
+## Next 13 app dir support
+
+This component [currently does not work with Next 13 app dir projects due to API changes in the router](https://github.com/apal21/nextjs-progressbar/issues/86#issuecomment-1434948309).
+
 ## How to install?
 
 ```bash

@@ -90,7 +90,7 @@ const NextNProgress = ({
       shallow,
     }: {
       shallow: boolean;
-    },
+    } = { shallow: false },
   ) => {
     if (!shallow || showOnShallow) {
       NProgress.set(startPosition);
